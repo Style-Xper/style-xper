@@ -1,0 +1,9 @@
+:root {
+  --primary: #d6fff9;
+  --secondary: #ff5cef;
+}
+
+html,
+body {
+  margin: 0px;
+}
