@@ -1,6 +1,17 @@
 {
+  "name": "style-synthesis",
+  "version": "1.0.0",
+  "description": "Style Synthesis",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel example/index.html",
+    "watch": "npx tsc --watch"
+  },
+  "author": "m3yevn",
+  "license": "ISC",
   "devDependencies": {
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
     "packages": "0.0.8"

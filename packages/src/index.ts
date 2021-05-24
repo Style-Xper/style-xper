@@ -5,4 +5,14 @@ function createStyles(styles: Object) {
   return result.classes;
 }
 
-export default createStyles;
+function createNestedStyles(styles: Object) {
+  const result = createClassNames(styles);
+  return result.classes;
+}
+
+export default (options: any = { syntax: "default" }) => {
+  return {
+    createStyles:
+      options?.syntax === "nested" ? createStyles : createNestedStyles,
+  };
+};

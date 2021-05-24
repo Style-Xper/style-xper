@@ -2,11 +2,13 @@
   "compilerOptions": {
     "noImplicitAny": true,
     "removeComments": true,
+    "lib": ["ES2016", "DOM"],
+
     "preserveConstEnums": true,
-    "outDir": "dist",
+    "outDir": "packages/dist",
     "sourceMap": false,
     "declaration": true
   },
-  "include": ["./src/"],
+  "include": ["./packages/src/"],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }

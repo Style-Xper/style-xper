@@ -12,13 +12,18 @@ export default function createClassNames(styles: any) {
 
   const styleKeys = Object.keys(styles);
 
-  styleKeys.forEach((key) => {
-    const id = idGenerator.generateId(key);
-    const styleStrings = createCssClass(id, styles[key]);
-    result.classes[key] = id;
+  const createIndividualClass =
+    (parentKey?: string, currentStyle?: any) => (key: string) => {
+      const id = idGenerator.generateId(key, parentKey);
+      const callNested = createIndividualClass;
 
-    styleElement.textContent = styleElement.textContent.concat(styleStrings);
-  });
+      const styleStrings = createCssClass(id, currentStyle[key], callNested);
+      result.classes[key] = id;
+
+      styleElement.textContent = styleElement.textContent.concat(styleStrings);
+    };
+
+  styleKeys.forEach(createIndividualClass(null, styles));
 
   renderStyleElement(styleElement);
 
