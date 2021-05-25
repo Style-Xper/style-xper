@@ -3,7 +3,7 @@ import { routes } from "./utils/routes";
 import { styles } from "./App.styles";
 
 export default () => {
-  const [currentRoute, setRoute] = React.useState("Example 1");
+  const [currentRoute, setRoute] = React.useState("Single Class");
 
   const handleDirect = (label) => () => {
     setRoute(label);
@@ -17,8 +17,8 @@ export default () => {
     <div className={styles.container}>
       <div className={styles.sidePanel}>
         <ul className={styles.list}>
-          {routes.map((route) => (
-            <li className={styles.listItem}>
+          {routes.map((route, index) => (
+            <li key={index} className={styles.listItem}>
               <a
                 className={
                   styles.linkItem +

@@ -3,6 +3,10 @@ export default (jsStyle: any) => {
   const jsStyleKeys = Object.keys(jsStyle);
   const lastIndex = jsStyleKeys.length - 1;
   jsStyleKeys.forEach((objectKey, index) => {
+    if (typeof jsStyle[objectKey] !== "string") {
+      return;
+    }
+
     cssString +=
       objectKey.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`) +
       ": " +

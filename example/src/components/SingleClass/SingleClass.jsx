@@ -1,6 +1,9 @@
 import React from "react";
-import { styles } from "./Example1.styles";
+import { styles } from "./SingleClass.styles";
 
+/**
+ * Depicting simple single class and single element usage to style
+ */
 export default () => {
   return (
     <div className={styles.container}>

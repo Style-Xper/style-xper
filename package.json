@@ -4,8 +4,8 @@
   "description": "Style Synthesis",
   "main": "index.js",
   "scripts": {
-    "start": "parcel example/index.html",
-    "watch": "npx tsc --watch"
+    "example": "parcel example/index.html",
+    "package:core": "npx tsc --watch --lib ES2016,DOM --outDir packages/core/dist --declaration  packages/core/src/index.ts"
   },
   "author": "m3yevn",
   "license": "ISC",

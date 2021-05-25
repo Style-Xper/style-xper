@@ -1,13 +1,13 @@
-import { synth } from "../utils/synth";
+import { synth } from "../../utils/synth";
 
 export const styles = synth.createStyles({
   container: {
     fontSize: "100px",
     background: "var(--secondary)",
-    padding: "16px"
+    padding: "16px",
   },
   helloWorld: {
     color: "black",
-    fontWeight: "700"
-  },
+    fontWeight: "700",
+  }
 });

@@ -1,12 +1,12 @@
-import Example1 from "../components/Example1";
+import SingleClass from "../components/SingleClass/SingleClass";
 
 export const routes = [
-  { label: "Example 1", component: Example1 },
-  { label: "Example 2", component: null },
-  { label: "Example 3", component: null },
-  { label: "Example 4", component: null },
-  { label: "Example 5", component: null },
-  { label: "Example 6", component: null },
-  { label: "Example 7", component: null },
-  { label: "Example 8", component: null }
+  { label: "Single Class", component: SingleClass },
+  { label: "Multiple Classes", component: null },
+  { label: "Nested Classes", component: null },
+  { label: "ID Selector", component: null },
+  { label: "All Elements", component: null },
+  { label: "Single Element", component: null },
+  { label: "Single Element with Class", component: null },
+  { label: "Multiple Elements", component: null },
 ];

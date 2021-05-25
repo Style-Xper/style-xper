@@ -9,9 +9,9 @@ class IdGenerator {
     return this.count;
   };
 
-  generateId = (name: string, parentKey: string) => {
+  generateId = (name: string) => {
     if (ELEMENTS.includes(name)) {
-      return `${parentKey} ${name}`;
+      return `${name}`;
     }
     const count = this.generateCount();
     return `${PREFIX}_${name}_${count}`;

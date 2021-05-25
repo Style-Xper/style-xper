@@ -1,2 +1,3 @@
-import createSynth from "../../../packages/dist";
-export const synth = createSynth();
+import createStyles from "../../../packages/core/dist";
+
+export const synth = { createStyles };
