@@ -1,7 +1,7 @@
 import { synth } from "../utils/synth";
 
 export const styles = synth.createStyles({
-  wrapper: {
+  container: {
     fontSize: "100px",
     background: "var(--secondary)",
     padding: "16px"

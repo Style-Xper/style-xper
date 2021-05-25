@@ -5,22 +5,24 @@ export const styles = synth.createStyles({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    background: "black",
+    background: "var(--primary)",
     height: "100vh",
     position: "relative",
   },
 
   sidePanel: {
     position: "absolute",
-    top: "4px",
-    left: "4px",
+    top: "0px",
+    left: "0px",
+    padding: "0px 24px",
+    background: "#333",
+    height: "100vh",
   },
 
   list: {
-    padding: "8px 24px",
-    background: "#333",
-    height: "92vh",
     overflow: "auto",
+    margin: "0px",
+    padding: "16px 0px",
   },
 
   listItem: {
