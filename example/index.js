@@ -1,8 +1,5 @@
-import App from "./src/App";
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./src/App.jsx";
 
-const redirect = () => {
-  history.pushState(null, null, "/example/1");
-};
-
-redirect();
-document.getElementById("root").appendChild(App);
+ReactDOM.render(<App />, document.getElementById("root"));
