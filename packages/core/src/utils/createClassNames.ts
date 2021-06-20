@@ -2,7 +2,7 @@ import idGenerator from "./generateId";
 import createCssClass from "./createCssClass";
 import renderStyleElement from "./renderStyleElement";
 
-export default function createClassNames(styles: any) {
+export default function createClassNames(styles: any,options:any) {
   const styleElement = document.createElement("style");
   styleElement.setAttribute("data-style-synthesis", "");
 

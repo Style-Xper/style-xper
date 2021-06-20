@@ -5,8 +5,8 @@ import createClassNames from "./utils/createClassNames";
  * @param styles
  * @returns classes
  */
-function createStyles(styles: Object) {
-  const result = createClassNames(styles);
+function createStyles(styles: Object, options?: any) {
+  const result = createClassNames(styles, options);
   return result.classes;
 }
 

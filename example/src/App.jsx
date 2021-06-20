@@ -3,14 +3,28 @@ import { routes } from "./utils/routes";
 import { styles } from "./App.styles";
 
 export default () => {
-  const [currentRoute, setRoute] = React.useState("Single Class");
+  const [currentRoute, setRoute] = React.useState(routes?.[0]?.value);
+  const [firstTime, setFirstTime] = React.useState(true);
 
-  const handleDirect = (label) => () => {
-    setRoute(label);
+  React.useEffect(() => {
+    const pathName = location.pathname;
+    const currentPath = pathName.replace("/", "");
+    setRoute(currentPath);
+  }, [location]);
+
+  React.useEffect(() => {
+    if (firstTime) {
+      history.pushState(null, null, `/${routes?.[0]?.value}`);
+      setFirstTime(false);
+    }
+  }, [firstTime]);
+
+  const handleDirect = (value) => () => {
+    history.pushState(null, null, `/${value}`);
   };
 
   const SelectedRoute = routes.find(
-    (route) => route.label === currentRoute
+    (route) => route.value === currentRoute
   )?.component;
 
   return (
@@ -23,9 +37,9 @@ export default () => {
                 className={
                   styles.linkItem +
                   " " +
-                  (currentRoute === route?.label ? styles.selectedLink : "")
+                  (currentRoute === route?.value ? styles.selectedLink : "")
                 }
-                onClick={handleDirect(route.label)}>
+                onClick={handleDirect(route?.value ?? "")}>
                 {route.label}
               </a>
             </li>
