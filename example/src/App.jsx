@@ -21,7 +21,7 @@ export const styles = sx.createStyles({
   logo: {
     fontWeight: "1400",
     fontSize: "60px",
-    marginTop: "20px",
+    marginTop: "40px",
     color: "var(--secondary)"
   },
 });
