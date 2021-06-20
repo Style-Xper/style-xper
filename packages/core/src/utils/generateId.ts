@@ -1,4 +1,4 @@
-import { PREFIX, ELEMENTS } from "../constants";
+import { PREFIX } from "../constants";
 
 class IdGenerator {
   constructor() {}
@@ -10,9 +10,6 @@ class IdGenerator {
   };
 
   generateId = (name: string) => {
-    if (ELEMENTS.includes(name)) {
-      return `${name}`;
-    }
     const count = this.generateCount();
     return `${PREFIX}_${name}_${count}`;
   };

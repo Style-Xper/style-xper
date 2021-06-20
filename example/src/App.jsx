@@ -1,52 +1,36 @@
 import React from "react";
-import { routes } from "./utils/routes";
-import { styles } from "./App.styles";
+import { sx } from "./utils/sx";
+
+export const styles = sx.createStyles({
+  container: {
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+
+    alignItems: "center",
+    background: "var(--primary)",
+    height: "100vh",
+    position: "relative",
+  },
+
+  title: {
+    fontWeight: "bold",
+    fontSize: "60px",
+  },
+
+  logo: {
+    fontWeight: "1400",
+    fontSize: "60px",
+    marginTop: "20px",
+    color: "var(--secondary)"
+  },
+});
 
 export default () => {
-  const [currentRoute, setRoute] = React.useState(routes?.[0]?.value);
-  const [firstTime, setFirstTime] = React.useState(true);
-
-  React.useEffect(() => {
-    const pathName = location.pathname;
-    const currentPath = pathName.replace("/", "");
-    setRoute(currentPath);
-  }, [location]);
-
-  React.useEffect(() => {
-    if (firstTime) {
-      history.pushState(null, null, `/${routes?.[0]?.value}`);
-      setFirstTime(false);
-    }
-  }, [firstTime]);
-
-  const handleDirect = (value) => () => {
-    history.pushState(null, null, `/${value}`);
-  };
-
-  const SelectedRoute = routes.find(
-    (route) => route.value === currentRoute
-  )?.component;
-
   return (
     <div className={styles.container}>
-      <div className={styles.sidePanel}>
-        <ul className={styles.list}>
-          {routes.map((route, index) => (
-            <li key={index} className={styles.listItem}>
-              <a
-                className={
-                  styles.linkItem +
-                  " " +
-                  (currentRoute === route?.value ? styles.selectedLink : "")
-                }
-                onClick={handleDirect(route?.value ?? "")}>
-                {route.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div>{!!SelectedRoute && <SelectedRoute />}</div>
+      <div className={styles.title}>This is Style-Xper</div>
+      <div className={styles.logo}>{"<🖌️>"}</div>
     </div>
   );
 };
