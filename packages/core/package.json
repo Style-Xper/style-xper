@@ -1,0 +1,34 @@
+{
+  "name": "@style-xper/style-xper-jss",
+  "version": "1.0.0",
+  "description": "A simple Css-In-JS library",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Style-Xper/style-xper.git"
+  },
+  "keywords": [
+    "Css-In-JS",
+    "JSS",
+    "Style-Xper"
+  ],
+  "author": "m3yevn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Style-Xper/style-xper/issues"
+  },
+  "homepage": "https://github.com/Style-Xper/style-xper#readme",
+  "funFacts": [
+    "⚡ Blazing fast style generation",
+    "⚙️ Simple and easy configuration syntax",
+    "🦾 Framework Agnostic",
+    "📦 Tiny bundle size"
+  ],
+  "badges": [],
+  "techStacks": [],
+  "screenshots": []
+}

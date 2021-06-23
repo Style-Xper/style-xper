@@ -5,19 +5,32 @@
   "main": "index.js",
   "scripts": {
     "example": "parcel example/index.html",
-    "package:core": "npx tsc --watch --lib ES2016,DOM --outDir packages/core/dist --declaration  packages/core/src/index.ts"
+    "package:core": "npx tsc --watch --lib ES2016,DOM --outDir packages/core/dist --declaration  packages/core/src/index.ts",
+    "build:core": "npx tsc --lib ES2016,DOM --outDir packages/core/dist --declaration  packages/core/src/index.ts"
   },
   "author": "m3yevn",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^4.2.4",
-    "parcel-bundler": "^1.12.5"
-  },
-  "dependencies": {
+    "parcel-bundler": "^1.12.5",
     "packages": "0.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0"
-  }
+  },
+  "dependencies": {},
+  "funFacts": [
+    "⚡ Blazing fast style generation",
+    "⚙️ Simple and easy configuration syntax",
+    "🦾 Framework Agnostic",
+    "📦 Tiny bundle size"
+  ],
+  "badges": [],
+  "techStacks": [
+    "HTML",
+    "CSS",
+    "Javascript"
+  ],
+  "screenshots": []
 }
